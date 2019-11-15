@@ -5,7 +5,7 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
-function makeDinosaurObject(species, diet, weight, height, age){
+function makeDinosaurObject(species, diet, weight, height, age, phrase){
   var dinosaur={
     species:species,
     diet:diet,
@@ -13,13 +13,14 @@ function makeDinosaurObject(species, diet, weight, height, age){
     height:height,
     age:age,
     roar: function(){
-      return 'RAWERSRARARWERSARARARRRR!'
+      return phrase
     }
   };
   return dinosaur;
 }
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
-const tRex = makeDinosaurObject('tyrannosaurus', 'carnivorous', '7000kg', '12m', 'Late Cretaceous');
+
+const tRex = makeDinosaurObject('tyrannosaurus', 'carnivorous', '7000kg', '12m', 'Late Cretaceous','RAWERSRARARWERSARARARRRR!');
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 const sTeg = makeDinosaurObject('stegosaurus','herbivorous','2000kg','9m','Late Jurassic');
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
@@ -30,17 +31,17 @@ const vElo = makeDinosaurObject('velociraptor','carnivorous','15kg','1,8m','Late
 console.log(tRex.weight);
 
 // What was the diet of a velociraptor?
-console.log(vElo.weight);
+console.log(vElo.diet);
 
 // How long was a stegosaurus?
-console.log(sTeg.weight);
+console.log(sTeg.height);
 
 // What time period did tyrannosaurus live in?
 console.log(tRex.age);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(makeDinosaurObject.roar);
+console.log(makeDinosaurObject.dinosaur)
 
 
 // ==== Arrays ====
