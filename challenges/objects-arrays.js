@@ -12,9 +12,7 @@ function makeDinosaurObject(species, diet, weight, height, age, phrase){
     weight:weight,
     height:height,
     age:age,
-    roar: function(){
-      return phrase
-    }
+    roar: phrase
   };
   return dinosaur;
 }
@@ -41,7 +39,7 @@ console.log(tRex.age);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log(makeDinosaurObject.roar)
+console.log(tRex.roar)
 
 
 // ==== Arrays ====
